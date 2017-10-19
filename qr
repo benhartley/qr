@@ -1,0 +1,10 @@
+#! /usr/bin/env bash
+
+set -euo pipefail
+
+function main {
+    read  -rsp "Text to QR: " TO_QR
+    echo "${TO_QR}" | qrencode -o - | feh -
+}
+
+main
