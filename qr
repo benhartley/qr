@@ -1,9 +1,9 @@
-#! /usr/bin/env bash
+#! /usr/bin/env zsh
 
 set -euo pipefail
 
 function main {
-    read  -rsp "Text to QR: " TO_QR
+    read -rs "TO_QR?Text to QR: "
     echo "${TO_QR}" | qrencode -o - | feh -
 }
 
