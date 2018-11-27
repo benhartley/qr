@@ -4,7 +4,7 @@ set -euo pipefail
 
 function main {
     read -rs "TO_QR?Text to QR: "
-    echo "${TO_QR}" | qrencode -o - | feh -
+    echo -n "${TO_QR}" | qrencode -o - | feh -
 }
 
 main
